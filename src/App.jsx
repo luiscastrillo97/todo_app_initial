@@ -41,7 +41,7 @@ const App = () => {
   return (
     <div className="p-4">
       <div className="container border border-1 border-info border-opacity-75 p-4 rounded-4 w-[80] shadow-lg">
-        <h1 className="text-center">To Do List App</h1>
+        <h1 className="text-center">TODO App</h1>
         <h3 className="mb-4">New Task</h3>
         <Formulario addTodo={addTodo} />
         <Todos
