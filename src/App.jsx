@@ -39,15 +39,17 @@ const App = () => {
   };
 
   return (
-    <div className="container mb-2">
-      <h1 className="my-5 text-center">To-Do App</h1>
-      <h2 className="mb-4">New To-Do</h2>
-      <Formulario addTodo={addTodo} />
-      <Todos
-        todos={orderTodos(todos)}
-        deleteTodo={deleteTodo}
-        updateTodo={updateTodo}
-      />
+    <div className="p-4">
+      <div className="container border border-1 border-info border-opacity-75 p-4 rounded-4 w-[80] shadow-lg">
+        <h1 className="text-center">To Do List App</h1>
+        <h3 className="mb-4">New Task</h3>
+        <Formulario addTodo={addTodo} />
+        <Todos
+          todos={orderTodos(todos)}
+          deleteTodo={deleteTodo}
+          updateTodo={updateTodo}
+        />
+      </div>
     </div>
   );
 };

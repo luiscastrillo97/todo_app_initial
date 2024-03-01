@@ -2,8 +2,6 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 
 const Formulario = ({ addTodo }) => {
-  const [error, setError] = useState(false);
-
   const [todo, setTodo] = useState({
     title: "",
     description: "",
@@ -23,8 +21,7 @@ const Formulario = ({ addTodo }) => {
         title: "Oops...",
         text: "Title and Description are required!",
       });
-      //setError(true);
-    } //else { setError(false);}
+    }
 
     addTodo({
       id: Date.now(),
@@ -35,7 +32,7 @@ const Formulario = ({ addTodo }) => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "To-Do added successfully",
+      title: "To Do added successfully",
       showConfirmButton: false,
       timer: 1500,
     });
@@ -49,7 +46,6 @@ const Formulario = ({ addTodo }) => {
   };
 
   const handleOnChange = (event) => {
-    //setTodo({ ...todo, priority: event.target.checked })
     const { type, name, value, checked } = event.target;
     setTodo({ ...todo, [name]: type === "checkbox" ? checked : value });
   };
@@ -91,11 +87,8 @@ const Formulario = ({ addTodo }) => {
         <option value="pending">Pending</option>
         <option value="completed">Completed</option>
       </select>
-      {error && (
-        <div className="alert alert-danger">Llenar todos los campos</div>
-      )}
-      <button className="btn btn-primary" type="submit">
-        Add To-Do
+      <button className="btn btn-primary w-25" type="submit">
+        Add
       </button>
     </form>
   );
