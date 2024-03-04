@@ -3,12 +3,12 @@ import Formulario from "./components/Formulario";
 import Todos from "./components/Todos";
 import { useEffect } from "react";
 
-const initialTodos = JSON.parse(localStorage.getItem("todos")) || [];
+const initialTodos = JSON.parse(localStorage.getItem("todos-initial")) || [];
 
 const App = () => {
   const [todos, setTodos] = useState(initialTodos);
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("todos-initial", JSON.stringify(todos));
   }, [todos]);
 
   const addTodo = (todo) => {

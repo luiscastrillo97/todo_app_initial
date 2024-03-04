@@ -87,8 +87,8 @@ const Formulario = ({ addTodo }) => {
         <option value="pending">Pending</option>
         <option value="completed">Completed</option>
       </select>
-      <button className="btn btn-primary w-25" type="submit">
-        Add
+      <button className="btn btn-primary w-100" type="submit">
+        <h5 className="m-0">Add</h5>
       </button>
     </form>
   );
